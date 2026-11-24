@@ -1,0 +1,125 @@
+/* Hill-climbing figure: a ridge profile with a climber that always steps uphill.
+   Markup is built by assets/js/hill-climbing-figure.js; colours come from tokens.css.
+   Alpenglow orange (--summit) marks only the climber, its trail and the summit flag. */
+
+.ridge {
+  margin: 0;
+  padding: 0.9rem 0.9rem 1.15rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.ridge__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.ridge__stop-top {
+  stop-color: var(--accent);
+  stop-opacity: 0.3;
+}
+
+.ridge__stop-bottom {
+  stop-color: var(--accent);
+  stop-opacity: 0.03;
+}
+
+.ridge__base {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.ridge__line {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ridge__peak {
+  fill: var(--surface);
+  stroke: var(--ink-soft);
+  stroke-width: 1.25;
+}
+
+.ridge__flag line {
+  stroke: var(--summit);
+  stroke-width: 1.5;
+}
+
+.ridge__flag path {
+  fill: var(--summit);
+}
+
+.ridge__label {
+  fill: var(--ink-soft);
+  font-family: var(--font-sans);
+  font-size: 11px;
+}
+
+.ridge__trail {
+  fill: none;
+  stroke: var(--summit);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ridge__start {
+  fill: none;
+  stroke: var(--summit);
+  stroke-width: 1.75;
+}
+
+.ridge__climber {
+  fill: var(--summit);
+  stroke: var(--surface);
+  stroke-width: 2;
+}
+
+.ridge__caption {
+  margin: 0.9rem 0.25rem 0;
+  color: var(--ink-soft);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.ridge__caption p {
+  margin: 0 0 0.4rem;
+}
+
+/* Reserve room for two lines so the button does not jump when the result appears. */
+.ridge__status {
+  min-height: 3.1em;
+  color: var(--ink);
+}
+
+.ridge__button {
+  min-height: 2.75rem;
+  margin-top: 0.4rem;
+  padding: 0.4rem 1.1rem;
+  background: transparent;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.ridge__button:hover:not(:disabled) {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.ridge__button:disabled {
+  opacity: 0.5;
+  cursor: progress;
+}

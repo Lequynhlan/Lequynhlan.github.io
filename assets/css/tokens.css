@@ -1,0 +1,69 @@
+/* Design tokens: colour, type and spacing.
+   Dark values appear twice on purpose: the media query follows the system setting,
+   [data-theme="dark"] follows the header toggle (set by a tiny inline script in <head>). */
+
+:root {
+  color-scheme: light;
+
+  /* Colour: snow, slate ink, glacier teal. Alpenglow orange is reserved for the
+     climber and the summit in the hill-climbing figure. */
+  --bg: #fafbfc;
+  --surface: #ffffff;
+  --ink: #17202a;
+  --ink-soft: #526170;
+  --line: #dde3e9;
+  --accent: #0b7285;
+  --accent-strong: #08596a;
+  --accent-wash: #eaf5f7;
+  --on-accent: #ffffff;
+  --summit: #d9480f;
+  --shadow: 0 1px 2px rgba(15, 30, 45, 0.06), 0 10px 28px rgba(15, 30, 45, 0.07);
+
+  /* Type: a sans designed with Vietnamese in mind for headings and interface,
+     a text serif for reading. */
+  --font-sans: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --step--1: 0.875rem;
+  --step-0: 1.125rem;
+  --step-1: 1.375rem;
+  --step-2: 1.75rem;
+  --step-3: clamp(2.5rem, 1.6rem + 4vw, 3.75rem);
+
+  /* Space and layout */
+  --gutter: clamp(1.25rem, 5vw, 2.5rem);
+  --container: 66rem;
+  --measure: 38rem;
+  --radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0e141b;
+    --surface: #141c25;
+    --ink: #e7edf3;
+    --ink-soft: #9ba9b6;
+    --line: #26323e;
+    --accent: #5cc3d1;
+    --accent-strong: #8ad7e2;
+    --accent-wash: #112630;
+    --on-accent: #062229;
+    --summit: #ff9a6c;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 28px rgba(0, 0, 0, 0.35);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0e141b;
+  --surface: #141c25;
+  --ink: #e7edf3;
+  --ink-soft: #9ba9b6;
+  --line: #26323e;
+  --accent: #5cc3d1;
+  --accent-strong: #8ad7e2;
+  --accent-wash: #112630;
+  --on-accent: #062229;
+  --summit: #ff9a6c;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 28px rgba(0, 0, 0, 0.35);
+}

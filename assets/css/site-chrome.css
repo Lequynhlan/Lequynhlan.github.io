@@ -1,0 +1,102 @@
+/* Header, navigation, theme toggle and footer shared by every page. */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+@supports (background: color-mix(in srgb, red 50%, blue)) {
+  .site-header {
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px);
+  }
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4rem;
+}
+
+.brand {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brand__given {
+  font-weight: 700;
+}
+
+.brand:hover {
+  color: var(--ink);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.9rem, 3vw, 1.75rem);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+.site-nav a {
+  padding-block: 0.4rem;
+  border-bottom: 2px solid transparent;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--ink);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.theme-toggle svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.site-footer {
+  margin-top: clamp(3.5rem, 8vw, 5.5rem);
+  padding-block: 1.75rem 2.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-family: var(--font-sans);
+  font-size: var(--step--1);
+}
+
+.site-footer p {
+  margin: 0;
+}

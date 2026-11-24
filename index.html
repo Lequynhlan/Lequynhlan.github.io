@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lê Quỳnh Lan – Master’s student in Computer Science, HUST</title>
+  <meta name="description" content="Lê Quỳnh Lan is a Master’s student in Computer Science at Hanoi University of Science and Technology (HUST), interested in algorithms, algorithm optimization and machine learning.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fafbfc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e141b" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lê Quỳnh Lan">
+  <meta property="og:description" content="Master’s student in Computer Science at HUST. Algorithms, algorithm optimization and machine learning. Mountain climber.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/site-chrome.css">
+  <link rel="stylesheet" href="assets/css/content.css">
+  <link rel="stylesheet" href="assets/css/hill-climbing-figure.css">
+  <script>
+    /* Apply a saved light/dark choice before first paint (no flash). */
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    } catch (error) { /* storage blocked: follow the system setting */ }
+  </script>
+  <script src="assets/js/theme-toggle.js" defer></script>
+  <script src="assets/js/ridge-profile.js" defer></script>
+  <script src="assets/js/hill-climbing-figure.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="./" lang="vi">Lê Quỳnh <span class="brand__given">Lan</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./" aria-current="page">About</a>
+        <a href="cv/">CV</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor" stroke="none"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero" aria-labelledby="name">
+      <div class="hero__text">
+        <h1 class="name" id="name" lang="vi">Lê Quỳnh <span class="name__given">Lan</span></h1>
+
+        <p>Hi, I’m Lan. I’m a Master’s student in Computer Science at Hanoi University of Science and Technology (HUST), where I also earned my engineering degree in Information Technology and graduated with a “Very Good” classification.</p>
+
+        <div class="callout">
+          <p>My research leans toward <strong>algorithms and algorithm optimization</strong> and <strong>machine learning</strong>. I like to understand why a method works, where its time and memory go, and how to make it faster, leaner and more reliable.</p>
+        </div>
+
+        <p>I’m happiest when I’m learning something new, and my master’s studies keep giving me plenty to learn. If you’d like to talk about algorithms, optimization or machine learning, I’d love to hear from you.</p>
+
+        <p>Away from the desk, I climb mountains. A good climb feels like a hard problem: choose a route, keep a steady pace, change plans when the terrain surprises you, and enjoy the view at the end. The little ridge on this page is my way of putting the two together.</p>
+
+        <ul class="link-row">
+          <li>
+            <a href="mailto:lequynhlan111@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+              Email
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/lan-le-635820212/" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.6v.1M12 16v-5.5M12 13.2a2.7 2.7 0 0 1 5.4 0V16"/></svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="cv/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg>
+              CV
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Filled in by assets/js/hill-climbing-figure.js. To show a portrait instead, see README. -->
+      <div class="hero__figure" data-hill-climbing></div>
+    </section>
+
+    <section class="section" aria-labelledby="education">
+      <h2 id="education">Education</h2>
+      <dl class="timeline">
+        <dt>In progress</dt>
+        <dd>
+          <strong>MSc in Computer Science</strong>
+          <p>Hanoi University of Science and Technology (HUST)</p>
+        </dd>
+        <dt>2019 – 2024</dt>
+        <dd>
+          <strong>Engineering degree in Information Technology</strong>
+          <p>Hanoi University of Science and Technology (HUST). Graduated with a “Very Good” classification.</p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="section" aria-labelledby="honors">
+      <h2 id="honors">Honors</h2>
+      <dl class="timeline">
+        <dt>2023</dt>
+        <dd>
+          <strong>Vietcombank Scholarship</strong>
+          <p>Awarded to top students of the School of Information and Communication Technology (SoICT), HUST.</p>
+        </dd>
+        <dt>2021</dt>
+        <dd>
+          <strong>Best Speaker</strong>
+          <p>NOBO Extended Debate Competition.</p>
+        </dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 <span lang="vi">Lê Quỳnh Lan</span></p>
+    </div>
+  </footer>
+</body>
+</html>

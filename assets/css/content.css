@@ -20,9 +20,9 @@
 .profile {
   float: right;
   width: 30%;
-  max-width: 270px;
-  /* 7px: the photo top lines up with the first line of text, as on the reference site. */
-  margin: 7px 0 16px 16px;
+  max-width: 240px;
+  /* Negative top margin lifts the photo level with the name; the title sits above the first line of text. */
+  margin: -44px 0 16px 16px;
 }
 
 .profile img {
@@ -40,7 +40,7 @@
   .profile {
     float: none;
     width: 100%;
-    max-width: 320px;
+    max-width: 280px;
     margin: 0 auto 16px;
   }
 }
